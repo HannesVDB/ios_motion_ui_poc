@@ -24,6 +24,7 @@ class CarDetailItemView: UIControl {
             actionButton.hero.modifiers = [.fade]
             titleLabel.hero.id = "title_hero"
             titleLabel.hero.modifiers = [.fade]
+            
         }
     }
     
