@@ -18,7 +18,7 @@ class CarItemView: UIControl {
             titleLabel.text = car?.brand.name
             imageView.image = car?.brand.image
             imageView.hero.id = "\(car?.brand.name ?? "")_hero"
-            containerView.hero.id = "container_hero"
+            containerView.hero.id = "container_hero_\(car?.brand.name ?? "")_hero"
         }
     }
     

@@ -19,12 +19,12 @@ class CarDetailItemView: UIControl {
             
             carImageView.hero.id = "\(car?.model ?? "")+\(car?.brand.name ?? "")"
             brandImageView.hero.id = "\(car?.brand.name ?? "")_hero"
-            containerView.hero.id = "container_hero"
+            containerView.hero.id = "container_hero_\(car?.brand.name ?? "")_hero"
             actionButton.hero.id = "actionbutton"
             actionButton.hero.modifiers = [.fade]
             titleLabel.hero.id = "title_hero"
             titleLabel.hero.modifiers = [.fade]
-            
+//            self.hero.id = "rnadom_id"
         }
     }
     
@@ -85,8 +85,8 @@ class CarDetailItemView: UIControl {
         addSubview(carImageView)
         carImageView.translatesAutoresizingMaskIntoConstraints = false
         carImageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        carImageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        carImageView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        carImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
+        carImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
         carImageView.heightAnchor.constraint(equalToConstant: 250).isActive = true
 
         addSubview(titleLabel)

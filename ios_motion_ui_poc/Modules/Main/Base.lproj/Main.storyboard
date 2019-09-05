@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,35 +20,43 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="NQB-kd-ECD">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="background_hero"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pw2-x7-Zox">
                                 <rect key="frame" x="0.0" y="747" width="414" height="149"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="container_id"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="480" translatesAutoresizingMaskIntoConstraints="NO" id="2A3-Y4-Y4o">
                                 <rect key="frame" x="20" y="272" width="374" height="480"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NH8-Xt-7Xj" customClass="CarOverview" customModule="ios_motion_ui_poc" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="672" width="414" height="150"/>
+                                <rect key="frame" x="77" y="672" width="260" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="aBT-LE-fRm"/>
+                                    <constraint firstAttribute="width" constant="260" id="gu3-Kk-NvN"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="NQB-kd-ECD" secondAttribute="trailing" id="2Q5-sa-TNt"/>
+                            <constraint firstItem="NH8-Xt-7Xj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2UM-4m-VlS"/>
                             <constraint firstItem="Pw2-x7-Zox" firstAttribute="top" secondItem="NH8-Xt-7Xj" secondAttribute="centerY" id="3rK-mC-tQt"/>
                             <constraint firstItem="NQB-kd-ECD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EPK-pk-THF"/>
                             <constraint firstAttribute="bottom" secondItem="NQB-kd-ECD" secondAttribute="bottom" id="Ir6-bV-JUK"/>
-                            <constraint firstItem="NH8-Xt-7Xj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nqu-zU-xbU"/>
                             <constraint firstItem="2A3-Y4-Y4o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TVq-i2-z4x"/>
                             <constraint firstItem="NH8-Xt-7Xj" firstAttribute="bottom" secondItem="2A3-Y4-Y4o" secondAttribute="bottom" constant="70" id="UOB-a9-yUW"/>
                             <constraint firstItem="NQB-kd-ECD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XyS-cK-ILn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2A3-Y4-Y4o" secondAttribute="trailing" constant="20" id="ZxH-2x-54m"/>
                             <constraint firstItem="2A3-Y4-Y4o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eBQ-Ts-Omo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NH8-Xt-7Xj" secondAttribute="trailing" id="eKi-gE-efq"/>
                             <constraint firstItem="Pw2-x7-Zox" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mqI-lN-Sfw"/>
                             <constraint firstAttribute="bottom" secondItem="Pw2-x7-Zox" secondAttribute="bottom" id="vre-PS-N3T"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pw2-x7-Zox" secondAttribute="trailing" id="wLR-hf-GD0"/>

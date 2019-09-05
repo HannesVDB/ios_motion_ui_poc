@@ -32,7 +32,8 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var carOverviewContainer: CarDetailOverview!
     @IBOutlet weak var informationLabel: UILabel!
-
+    @IBOutlet weak var informationTopConstraint: NSLayoutConstraint!
+    
     var dismissHandler: (() -> Void)?
     var scrollHandler:((Car?) -> Void)?
     var selectedCar: Car?
@@ -55,6 +56,13 @@ class DetailViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         didSetLayout = true
+        
+        informati
+        onTopConstraint.constant = 220
+        UIView.animate(withDuration: 0.25) {
+            self.informationLabel.alpha = 1
+            self.view.layoutIfNeeded()
+        }
     }
     
     
@@ -71,7 +79,7 @@ class DetailViewController: UIViewController {
     
     private func select(car: Car?) {
         informationLabel.text = car?.description
-        informationLabel.hero.id = "Information_\(car?.model ?? "")"
-        informationLabel.hero.modifiers = [.fade, .translate(y: 300), .duration(0.5)]
+//        informationLabel.hero.id = "Information_\(car?.model ?? "")"
+//        informationLabel.hero.modifiers = [.fade, .translate(y: 300), .duration(0.5)]
     }
 }
