@@ -57,8 +57,7 @@ class DetailViewController: UIViewController {
         super.viewDidAppear(animated)
         didSetLayout = true
         
-        informati
-        onTopConstraint.constant = 220
+        informationTopConstraint.constant = 220
         UIView.animate(withDuration: 0.25) {
             self.informationLabel.alpha = 1
             self.view.layoutIfNeeded()
